@@ -4,7 +4,7 @@ function App() {
 
     const questions = [
         {
-            questionText: 'Когда появились первые стоянки на территории Беларуси США',
+            questionText: 'Когда появились первые стоянки на территории Беларуси',
             answerOptions: [
                 {answerText: '26 тысяч лет тому назад', isCorrect: true},
                 {answerText: '30 тысяч лет тому назад', isCorrect: false},
