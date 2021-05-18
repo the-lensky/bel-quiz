@@ -4,41 +4,95 @@ function App() {
 
     const questions = [
         {
-            questionText: 'Столица США',
+            questionText: 'Когда появились первые стоянки на территории Беларуси США',
             answerOptions: [
-                {answerText: 'Бостон', isCorrect: false},
-                {answerText: 'Вашингтон', isCorrect: true},
-                {answerText: 'Балтимор', isCorrect: false},
-                {answerText: 'Лос-Анджелес', isCorrect: false},
+                {answerText: '26 тысяч лет тому назад', isCorrect: true},
+                {answerText: '30 тысяч лет тому назад', isCorrect: false},
+                {answerText: '24 тысяч лет тому назад', isCorrect: false},
+                {answerText: '28 тысяч лет тому назад', isCorrect: false},
             ]
         },
         {
-            questionText: 'Столица США',
+            questionText: 'Какой город стал первой столицей ВКЛ? ',
             answerOptions: [
-                {answerText: 'Бостон', isCorrect: false},
-                {answerText: 'Вашингтон', isCorrect: true},
-                {answerText: 'Балтимор', isCorrect: false},
-                {answerText: 'Лос-Анджелес', isCorrect: false},
+                {answerText: 'Полоцк', isCorrect: false},
+                {answerText: 'Новогрудок', isCorrect: true},
+                {answerText: 'Туров', isCorrect: false},
+                {answerText: 'Пинск', isCorrect: false},
             ]
         },
         {
-            questionText: 'Столица США',
+            questionText: 'В каком году в документах впервые упоминался Полоцк? ',
             answerOptions: [
-                {answerText: 'Бостон', isCorrect: false},
-                {answerText: 'Вашингтон', isCorrect: true},
-                {answerText: 'Балтимор', isCorrect: false},
-                {answerText: 'Лос-Анджелес', isCorrect: false},
+                {answerText: '859', isCorrect: false},
+                {answerText: '884', isCorrect: false},
+                {answerText: '894', isCorrect: false},
+                {answerText: '862', isCorrect: true},
             ]
         },
         {
-            questionText: 'Столица США',
+            questionText: 'С помощью какого документа образовали Речь Посполитую?',
             answerOptions: [
-                {answerText: 'Бостон', isCorrect: false},
-                {answerText: 'Вашингтон', isCorrect: true},
-                {answerText: 'Балтимор', isCorrect: false},
-                {answerText: 'Лос-Анджелес', isCorrect: false},
+                {answerText: 'Берестейская уния', isCorrect: false},
+                {answerText: 'Варшавский договор', isCorrect: false},
+                {answerText: 'Люблинская уния', isCorrect: true},
+                {answerText: 'Польский статут', isCorrect: false},
             ]
         },
+        {
+            questionText: 'Что ознаменовывал Брест-Литовский мирный договор?',
+            answerOptions: [
+                {answerText: 'Перевод Советской армии на сторону Австро-Венгрии', isCorrect: false},
+                {answerText: 'Выход Советской России из Первой мировой войны', isCorrect: true},
+                {answerText: 'Окончание первой мировой войны', isCorrect: false},
+                {answerText: 'Выход Беларуси из состава Польши', isCorrect: false},
+            ]
+        },
+        {
+            questionText: 'Когда была провозглашена БССР?',
+            answerOptions: [
+                {answerText: '1 января 1919', isCorrect: true},
+                {answerText: '3 июля 1921', isCorrect: false},
+                {answerText: '7 ноября 1917', isCorrect: false},
+                {answerText: '19 сентября 1921', isCorrect: false},
+            ]
+        },
+        {
+            questionText: 'Назовите день, когда Беларусь получила свою независимость',
+            answerOptions: [
+                {answerText: '23 агуста', isCorrect: false},
+                {answerText: '27 июля ', isCorrect: true},
+                {answerText: '3 июля', isCorrect: false},
+                {answerText: '17 февраля', isCorrect: false},
+            ]
+        },
+        {
+            questionText: 'Как зовут юного белоруса - героя Великой Отечественной войны?',
+            answerOptions: [
+                {answerText: 'Валя Котик', isCorrect: false},
+                {answerText: 'Павел Морозов ', isCorrect: false},
+                {answerText: 'Марат Казей', isCorrect: true},
+                {answerText: 'Зоя Космодемьянова', isCorrect: false},
+            ]
+        },
+        {
+            questionText: 'Сколько лет длилась Великая Отечественная война?',
+            answerOptions: [
+                {answerText: '3 года, 10 месяцев и 17 дней', isCorrect: true},
+                {answerText: '2 года, 11 месяцев и 9 дней', isCorrect: false},
+                {answerText: '5 лет, 8 месяцев и 11 дней', isCorrect: false},
+                {answerText: '4 года, 3 месяца и 7 дней', isCorrect: false},
+            ]
+        },
+        {
+            questionText: 'Выберите название первой белорусской газеты',
+            answerOptions: [
+                {answerText: 'Народная Нива', isCorrect: false},
+                {answerText: 'Народная Воля', isCorrect: false},
+                {answerText: 'Наша Нива', isCorrect: false},
+                {answerText: 'Наша Доля', isCorrect: true},
+            ]
+        }
     ]
 
 
@@ -73,7 +127,7 @@ function App() {
                     showScore
                         ? <div className='section__score'>
                             <div> Правильных ответов {score} из {questions.length}</div>
-                        <button onClick={handleRefresh} className='refresh__btn'>Попробовать еще раз</button>
+                            <button onClick={handleRefresh} className='refresh__btn'>Попробовать еще раз</button>
                         </div>
                         :
                         <div className='quiz'>
